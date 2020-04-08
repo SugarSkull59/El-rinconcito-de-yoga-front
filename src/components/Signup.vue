@@ -29,6 +29,22 @@
             :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
             @click:append="showPassword = !showPassword"
           ></v-text-field>
+
+          <v-text-field
+            label="Fecha de nacimiento"
+            v-model="user_birth"
+            type="date"
+          ></v-text-field>
+
+          <v-col class="d-flex" cols="6">
+            <v-select
+              :items="items"
+              label="Género"
+              v-model="genderSelected"
+              dense
+              outlined
+            ></v-select>
+          </v-col>
         </v-form>
       </v-card-text>
       <v-divider></v-divider>
@@ -57,7 +73,10 @@ export default {
       emailRules: [
         v => !!v || "E-mail is required",
         v => /.+@.+\..+/.test(v) || "E-mail must be valid"
-      ]
+      ],
+      user_birth: "",
+      genderSelected: "",
+      items: ["Hombre", "Mujer", "No quiero especicarlo"]
     };
   },
   methods: {
@@ -65,7 +84,9 @@ export default {
       const newUser = {
         user_name: this.username,
         user_email: this.email,
-        user_password: this.userPassword
+        user_password: this.userPassword,
+        user_birth: this.user_birth,
+        user_gender: this.genderSelected
       };
 
       APIServices.signup(newUser)

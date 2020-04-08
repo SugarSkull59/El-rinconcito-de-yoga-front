@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col cols="6">
-        <h1 id="title">Welcome to Reboot Academy Vue App</h1>
+        <h1 id="title">Si tienes cuenta logueate y si no, regístrate</h1>
       </v-col>
     </v-row>
     <v-row>
