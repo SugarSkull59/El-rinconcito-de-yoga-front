@@ -25,5 +25,14 @@ export default {
   async getCenters() {
     const response = await API.get("/centers");
     return response.data;
+  },
+
+  async getCenter(queryParam) {
+    const response = await API.get("/centers", {
+      params: {
+        q: queryParam
+      }
+    });
+    return response.data;
   }
 };

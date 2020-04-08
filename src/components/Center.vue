@@ -1,16 +1,5 @@
-<template>
-  <div class="center">
-    <ul>
-      <li>Nombre: {{ centers.name }}</li>
-    </ul>
-  </div>
-</template>
+<template></template>
 
 <script>
-export default {
-  name: "Center",
-  props: {
-    centers: Object
-  }
-};
+export default {};
 </script>

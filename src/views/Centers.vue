@@ -10,7 +10,6 @@
 <script>
 import APIServices from "../Services/Api";
 
-
 export default {
   data() {
     return {
