@@ -14,5 +14,16 @@ export default {
       ...newUser
     });
     return response.data;
+  },
+  async login(user) {
+    const response = await API.post("/auth/login", {
+      ...user
+    });
+    return response.data;
+  },
+
+  async getCenters() {
+    const response = await API.get("/centers");
+    return response.data;
   }
 };
