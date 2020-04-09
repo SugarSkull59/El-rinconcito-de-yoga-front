@@ -23,6 +23,7 @@
 
         <div>{{ center.description }}</div>
         <div>Horario: {{ center.schedule }}</div>
+        <div>Horario: {{ center.type_of_yoga }}</div>
 
         <div>
           Los precios rondan entre: {{ center.price_range_min }} y
