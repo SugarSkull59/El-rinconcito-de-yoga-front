@@ -50,7 +50,7 @@ export default {
 </script>
 <style>
 .home {
-  color: blue;
+  color: #1095cd;
   margin-left: 5%;
   text-decoration: none;
   margin-right: 5%;

@@ -5,6 +5,7 @@ import Auth from "../views/Auth.vue";
 import Centers from "../views/Centers.vue";
 import Center from "../views/Center.vue";
 import Yoga from "../views/Yoga.vue";
+import Maps from "../views/Maps.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: "/yoga",
     name: "Yoga",
     component: Yoga
+  },
+  {
+    path: "/maps",
+    name: "Maps",
+    component: Maps
   }
 ];
 

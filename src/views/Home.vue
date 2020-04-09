@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <h1 class="titulo">Bienvenido al rinconcito de Yoga</h1>
     <p class="bienvenida">texto bienvenida</p>
     <v-row class="mt-5">
@@ -54,7 +54,7 @@ export default {
 
 <style scoped>
 .titulo {
-  color: blue;
+  color: #1095cd;
   text-align: center;
   margin-top: 10px;
   font-size: 30px;
