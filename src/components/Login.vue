@@ -54,8 +54,13 @@ export default {
       };
       APIServices.login(user)
         .then(response => {
-          localStorage.setItem("token", response.token);
-          this.$router.push("/");
+          if (response.token) {
+            localStorage.setItem("token", response.token);
+            this.$emit("login");
+            this.$router.push("/");
+          } else {
+            console.log(response);
+          }
         })
         .catch(err => console.log(err));
     }

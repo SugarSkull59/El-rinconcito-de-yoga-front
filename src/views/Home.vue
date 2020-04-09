@@ -14,12 +14,6 @@
               transition="fade-transition"
             >
             </v-carousel-item>
-            <v-sheet v-for="(slide, i) in slides" :key="i" height="100%">
-              {{ slide }}
-              <v-row class="fill-height" align="center" justify="center">
-                <div class="display-3">{{ slide }} Slide</div>
-              </v-row>
-            </v-sheet>
           </v-carousel>
         </div>
       </v-col>
@@ -51,8 +45,7 @@ export default {
           src:
             "https://cdn.pixabay.com/photo/2018/02/06/14/07/dance-3134828_960_720.jpg"
         }
-      ],
-      slides: ["First", "Second", "Third", "Fourth"]
+      ]
     };
   },
   components: {}

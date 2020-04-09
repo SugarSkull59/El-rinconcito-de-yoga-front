@@ -7,7 +7,7 @@
     </v-row>
     <v-row>
       <v-col cols="3">
-        <Login />
+        <Login v-on:login="login" />
       </v-col>
       <v-col cols="3">
         <Signup />
