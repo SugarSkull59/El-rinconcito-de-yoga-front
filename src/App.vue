@@ -17,12 +17,7 @@
 
       <v-col cols="2">
         <p>Yoga</p>
-        <v-overflow-btn
-          class="my-2"
-          :items="dropdown_font"
-          label="Yoga"
-          target="#dropdown-example"
-        ></v-overflow-btn>
+        <v-overflow-btn class="my-2" :items="dropdown_font" label="Yoga" target="#dropdown-example"></v-overflow-btn>
       </v-col>
 
       <v-col cols="2">
@@ -37,8 +32,6 @@
 
       <router-link to="/productos" class="home">Productos</router-link>
       <router-link to="/auth" class="home">Auntetifícate</router-link>
-
-     
     </v-app-bar>
     <v-content>
       <router-view></router-view>
@@ -54,7 +47,10 @@ export default {
 
   data: () => ({
     dropdown_font: ["Qué es el yoga", "Tipos de yoga", "Beneficios"],
-    dropdown_centros: ["Ver centros por listado", "Ver mapa de centros"],
+    dropdown_centros: [
+      "<router-link :to='Home'> Ver centros por listado </router-link>",
+      "Ver mapa de centros"
+    ],
 
     dropdown_icon: [
       { text: "list", callback: () => console.log("list") },

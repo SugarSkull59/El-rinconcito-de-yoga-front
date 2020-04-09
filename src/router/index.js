@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Auth from "../views/Auth.vue";
 import Centers from "../views/Centers.vue";
+import Center from "../views/Center.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/centers",
     name: "Centros",
     component: Centers
+  },
+  {
+    path: "/center/:id",
+    name: "Centro",
+    component: Center
   }
 ];
 

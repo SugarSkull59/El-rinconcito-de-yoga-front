@@ -2,7 +2,9 @@
   <div>
     <h1>Lista de centros</h1>
     <ul v-for="center in centers" :key="center._id">
-      <li>Nombre: {{ center.name }}</li>
+      <router-link :to="{ name: 'Centro', params: { id: center._id } }">
+        <li>Nombre: {{ center.name }}</li>
+      </router-link>
     </ul>
   </div>
 </template>
