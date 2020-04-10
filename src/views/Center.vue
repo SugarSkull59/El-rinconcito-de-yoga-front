@@ -23,7 +23,6 @@
 
         <div>{{ center.description }}</div>
         <div>Horario: {{ center.schedule }}</div>
-        <div>Horario: {{ center.type_of_yoga }}</div>
 
         <div>
           Los precios rondan entre: {{ center.price_range_min }} y
@@ -32,12 +31,11 @@
       </v-card-text>
 
       <v-card-actions>
-        <v-btn color="#1095cd" text>
-          Deja tu valoración
+        <v-btn icon color="#1095cd">
+          <v-icon class="iconoEstrella">mdi-star</v-icon>
         </v-btn>
-
-        <v-btn color="#1095cd" text>
-          Añade a tus favoritos
+        <v-btn icon color="#1095cd">
+          <v-icon class="iconoCorazon">mdi-heart</v-icon>
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -82,5 +80,11 @@ export default {
 .linea {
   text-decoration: none;
   margin-left: 10px;
+}
+.iconoEstrella {
+  margin-left: 200px;
+}
+.iconoCorazon {
+  margin-left: 400px;
 }
 </style>

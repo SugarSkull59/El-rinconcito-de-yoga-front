@@ -1,8 +1,7 @@
 import axios from "axios";
 
 const APIMAPS = axios.create({
-  baseURL:
-    "http://maps.googleapis.com/maps/api/js?key=APIKEY=initMap",
+  baseURL: "http://maps.googleapis.com/maps/api/js?key=APIKEY=initMap",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json"

@@ -21,8 +21,8 @@
       <router-link to="/auth" class="home" v-if="!signed">
         <v-icon>mdi-location-enter</v-icon>
       </router-link>
-      <router-link to="/" class="home" v-else>
-        <v-icon>mdi-exit-to-app</v-icon>
+      <router-link to="/" class="home" v-else @click="logout">
+        <v-icon @click="logout">mdi-exit-to-app</v-icon>
       </router-link>
       <router-link to="/perfil" class="home">
         <v-icon>mdi-account</v-icon>
@@ -46,6 +46,13 @@ export default {
     this.$root.$on("login", status => {
       this.signed = status;
     });
+  },
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.signed = false;
+      this.$router.push("/");
+    }
   }
 };
 </script>

@@ -1,34 +1,50 @@
 <template>
-  <div>
-    <v-card width="400px" class="ml-5 mt-5 mx-a">
-      <v-card-title class="pb-0">
-        <h1>Perfil</h1>
-      </v-card-title>
-      <v-card-text>
-        <v-form>
-          <v-text-field
-            :label="user.email"
-            v-model="userEmail"
-            prepend-icon="mdi-account-circle"
-          ></v-text-field>
+  <div class="form">
+    <h2>Información de tu perfil</h2>
+    <form method="POST">
+      <label for="inputName" class="sr-only">Nombre:{{ user.name }}</label
+      ><br />
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        placeholder="Nuevo nombre"
+      /><br /><br />
 
-          <v-text-field
-            label="Password"
-            v-model="userPassword"
-            :type="showPassword ? 'text' : 'password'"
-            prepend-icon="mdi-lock"
-            :rules="passwordRule"
-            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-            @click:append="showPassword = !showPassword"
-          ></v-text-field>
-        </v-form>
-      </v-card-text>
-      <v-divider></v-divider>
-      <v-card-actions>
-        <v-btn color="info" @click="login">Login</v-btn>
-      </v-card-actions>
-    </v-card>
-    {{ user }}
+      <label for="inputbirth" class="sr-only"
+        >Fecha de nacimiento:{{ user.date_of_birth }}</label
+      ><br />
+      <input
+        type="date"
+        id="birth"
+        class="form-control"
+        placeholder="Cambiar fecha de nacimiento"
+      /><br /><br />
+
+      <label for="inputEmail" class="sr-only">Email:{{ user.email }}</label
+      ><br />
+      <input
+        type="email"
+        id="login_email"
+        class="form-control"
+        placeholder="Nuevo email"
+      /><br /><br />
+
+      <label for="inputPassword" class="sr-only">Cambio de contraseña</label
+      ><br />
+      <input
+        type="password"
+        id="login_psw"
+        class="form-control"
+        placeholder="Contraseña"
+      />
+      <input
+        type="password"
+        id="login_psw"
+        class="form-control"
+        placeholder="Nueva contraseña"
+      /><br />
+    </form>
   </div>
 </template>
 
@@ -47,4 +63,20 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+.form {
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 15px 15px;
+  border: 1px solid #1095cd;
+  border-radius: 3%;
+}
+.form h2 {
+  color: #1095cd;
+}
+
+.input {
+  border: 1px black;
+}
+</style>
