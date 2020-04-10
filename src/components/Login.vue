@@ -56,7 +56,8 @@ export default {
         .then(response => {
           if (response.token) {
             localStorage.setItem("token", response.token);
-            this.$emit("login");
+            localStorage.setItem("userId", response.userID);
+            this.$root.$emit("login", true);
             this.$router.push("/");
           } else {
             console.log(response);

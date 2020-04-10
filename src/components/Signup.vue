@@ -92,6 +92,8 @@ export default {
       APIServices.signup(newUser)
         .then(response => {
           localStorage.setItem("token", response.token);
+          localStorage.setItem("userId", response.userID);
+          this.$root.$emit("login", true);
           this.$router.push("/");
         })
         .catch(err => console.log(err));

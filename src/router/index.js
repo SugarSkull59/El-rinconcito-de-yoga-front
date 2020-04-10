@@ -6,6 +6,7 @@ import Centers from "../views/Centers.vue";
 import Center from "../views/Center.vue";
 import Yoga from "../views/Yoga.vue";
 import Maps from "../views/Maps.vue";
+import Perfil from "../views/Perfil.vue";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: "/maps",
     name: "Maps",
     component: Maps
+  },
+  {
+    path: "/perfil",
+    name: "Perfil",
+    component: Perfil
   }
 ];
 

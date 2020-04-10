@@ -62,7 +62,6 @@ export default {
   },
   async created() {
     const center = await APIServices.getCenter(this.$route.params.id);
-    console.log(center);
     this.center = center;
   }
 };

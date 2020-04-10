@@ -30,5 +30,14 @@ export default {
   async getCenter(centerId) {
     const response = await API.get(`/centers/${centerId}`);
     return response.data;
+  },
+
+  async getUser(userId) {
+    const response = await API.get(`/users/${userId}`, {
+      headers: {
+        token: localStorage.getItem("token")
+      }
+    });
+    return response.data;
   }
 };

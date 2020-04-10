@@ -14,17 +14,17 @@
         </div>
       </router-link>
       <v-spacer></v-spacer>
-
-      <router-link to="/yoga" class="home">Yoga</router-link>
       <router-link to="/centers" class="home">Centros</router-link>
       <router-link to="/productos" class="home">Productos</router-link>
+      <router-link to="/yoga" class="home">Yoga</router-link>
+      <v-spacer></v-spacer>
       <router-link to="/auth" class="home" v-if="!signed">
         <v-icon>mdi-location-enter</v-icon>
       </router-link>
       <router-link to="/" class="home" v-else>
         <v-icon>mdi-exit-to-app</v-icon>
       </router-link>
-      <router-link to="#" class="home">
+      <router-link to="/perfil" class="home">
         <v-icon>mdi-account</v-icon>
       </router-link>
     </v-app-bar>
@@ -37,14 +37,15 @@
 <script>
 export default {
   name: "App",
-
-  components: {},
-
-  data: () => ({
-    signed: false
-  }),
-  created() {
-    this.signed = localStorage.getItem("token");
+  data() {
+    return {
+      signed: false
+    };
+  },
+  mounted() {
+    this.$root.$on("login", status => {
+      this.signed = status;
+    });
   }
 };
 </script>

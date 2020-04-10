@@ -1,7 +1,15 @@
 <template>
   <div>
     <h1 class="titulo">Bienvenido al rinconcito de Yoga</h1>
-    <p class="bienvenida">texto bienvenida</p>
+    <div class="bienvenida">
+      <p>
+        Practicado desde hace miles de años en la india, esta práctica se ha
+        convertido en un estilo de vida sana, que cuida y fortalece el cuerpo y
+        mente mediante una serie de posturas, técnicas de respiración y
+        meditación. Aquí encontrarás información de los centros de Canarias
+        donde puedes practicarlo.
+      </p>
+    </div>
     <v-row class="mt-5">
       <v-col cols="8" offset="2">
         <div height="500px">
@@ -61,5 +69,8 @@ export default {
 }
 .bienvenida {
   text-align: center;
+  width: 800px;
+  margin: auto;
+  margin-top: 5px;
 }
 </style>
