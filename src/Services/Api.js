@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://el-rinconcito-de-yoga.herokuapp.com/api",
+  baseURL: process.env.VUE_APP_API_URL,
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json"
